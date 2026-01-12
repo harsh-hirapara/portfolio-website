@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harsh Hirapara — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f62fe;
+      --glass: rgba(15,98,254,0.06);
+      --shadow: 0 6px 22px rgba(23,23,23,0.06);
+      --radius: 12px;
+      --max-width:1100px;
+      --container-padding:24px;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#111}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:var(--container-padding)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6a8cff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:var(--shadow)}
+    nav{display:flex;gap:12px}
+    nav a{padding:10px 14px;border-radius:10px;font-weight:600;color:var(--muted)}
+    nav a.cta{background:var(--card);box-shadow:var(--shadow);color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:26px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.hero-right{order:-1}}
+    .intro h1{font-size:30px;margin:0 0 6px}
+    .intro p.lead{margin:0 0 18px;color:var(--muted);line-height:1.5}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .badge{background:var(--glass);padding:8px 10px;border-radius:8px;font-weight:600;color:var(--accent);font-size:13px}
+
+    .hero-right{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.85));padding:18px;border-radius:14px;box-shadow:var(--shadow);}
+    .contact-quick{display:flex;flex-direction:column;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;font-weight:700;border:1px solid rgba(0,0,0,0.05);cursor:pointer}
+    .btn.primary{background:var(--accent);color:#fff;border:none}
+    .btn.ghost{background:transparent}
+
+    /* Sections */
+    section{margin-top:40px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .skill{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff)}
+    .skill .meta{display:flex;justify-content:space-between;margin-bottom:8px}
+    .bar{height:10px;background:#e9eef9;border-radius:8px;overflow:hidden}
+    .bar > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#6a8cff);border-radius:8px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:900px){.projects{grid-template-columns:repeat(1,1fr)}}
+    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfdff);border:1px solid rgba(15,98,254,0.04)}
+    .project h4{margin:0 0 8px}
+    .project p{margin:0 0 12px;color:var(--muted)}
+    .project .links{display:flex;gap:8px}
+
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .item{display:flex;gap:12px;align-items:flex-start}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px}
+    .meta small{color:var(--muted)}
+
+    /* Contact form */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    form .full{grid-column:1/-1}
+    input,textarea{padding:12px;border-radius:8px;border:1px solid rgba(17,17,17,0.06);font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+
+    /* Footer */
+    footer{margin:30px 0;text-align:center;color:var(--muted)}
+
+    /* reveal helper */
+    .reveal{opacity:0;transform:translateY(18px);transition:all .7s cubic-bezier(.2,.8,.2,1)}
+    .reveal.visible{opacity:1;transform:none}
+
+    /* small screens */
+    @media (max-width:700px){
+      nav{display:none}
+      .wrap{padding:16px}
+      .projects{grid-template-columns:1fr}
+      .skills-grid{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">HH</div>
+        <div>
+          <div style="font-weight:800">Harsh Hirapara</div>
+          <div style="font-size:13px;color:var(--muted)">Full Stack Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#exp">Experience</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="intro">
+        <h1 class="reveal">Hi, I'm <span style="color:var(--accent)">Harsh Hirapara</span></h1>
+        <p class="lead reveal">Software Developer with 3+ years of hands-on experience in developing and maintaining products, creating highly scalable applications using agile methodology, multiple tech stacks, databases, cloud, and containerization.</p>
+
+        <div class="badges reveal">
+          <div class="badge">Fullstack Development — 85%</div>
+          <div class="badge">App Development — 95%</div>
+          <div class="badge">BackEnd Development — 90%</div>
+          <div class="badge">Frontend Development — 85%</div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center" class="reveal">
+          <button class="btn primary" onclick="scrollToSection('projects')">See Projects</button>
+          <button class="btn ghost" onclick="scrollToSection('contact')">Hire Me</button>
+        </div>
+      </div>
+
+      <aside class="hero-right card reveal">
+        <div style="font-weight:700;margin-bottom:8px">Contact</div>
+        <div class="contact-quick">
+          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">Email</div>
+              <div style="font-size:13px;color:var(--muted)">harsh.email@example.com</div>
+            </div>
+            <button class="btn" onclick="scrollToSection('contact')">Message</button>
+          </div>
+
+          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">Location</div>
+              <div style="font-size:13px;color:var(--muted)">India</div>
+            </div>
+            <div style="font-size:12px;color:var(--muted);font-weight:700">Available</div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="card reveal">
+        <h3>About Me</h3>
+        <p style="color:var(--muted)">I understand customer requirements and deliver projects end-to-end. I demonstrate the ability to fix bugs and maintain code by applying unit testing and automation wherever appropriate. I enjoy working across the stack and mentoring teammates when possible.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h3 style="margin-top:18px">Skills</h3>
+      <div class="skills-grid">
+        <div class="skill card reveal">
+          <div class="meta"><strong>Fullstack Development</strong><span>85%</span></div>
+          <div class="bar"><i data-width="85"></i></div>
+        </div>
+        <div class="skill card reveal">
+          <div class="meta"><strong>App Development</strong><span>95%</span></div>
+          <div class="bar"><i data-width="95"></i></div>
+        </div>
+        <div class="skill card reveal">
+          <div class="meta"><strong>BackEnd Development</strong><span>90%</span></div>
+          <div class="bar"><i data-width="90"></i></div>
+        </div>
+        <div class="skill card reveal">
+          <div class="meta"><strong>Frontend Development</strong><span>85%</span></div>
+          <div class="bar"><i data-width="85"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h3 style="margin-top:18px">Selected Projects</h3>
+      <div class="projects">
+        <div class="project reveal">
+          <h4>Project Alpha</h4>
+          <p>Enterprise admin panel with role-based auth, REST APIs, and real-time analytics. Tech: React, Node, PostgreSQL, Docker</p>
+          <div class="links"><a href="#">Live</a> • <a href="#">Repo</a></div>
+        </div>
+        <div class="project reveal">
+          <h4>Mobile App Beta</h4>
+          <p>Cross-platform app with offline sync, push notifications and CI/CD. Tech: Flutter, Firebase</p>
+          <div class="links"><a href="#">Live</a> • <a href="#">Repo</a></div>
+        </div>
+        <div class="project reveal">
+          <h4>API Gateway</h4>
+          <p>High-throughput microservices gateway, monitoring, and automated deployment pipelines. Tech: Node, Kubernetes, Redis</p>
+          <div class="links"><a href="#">Live</a> • <a href="#">Repo</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="exp">
+      <h3 style="margin-top:18px">Experience</h3>
+      <div class="card timeline reveal">
+        <div class="item">
+          <div class="dot"></div>
+          <div class="meta">
+            <strong>Senior Software Developer — XYZ Company</strong>
+            <div><small>2023 — Present</small></div>
+            <div style="color:var(--muted)">Leading feature development, code reviews and architecture discussions for SaaS product.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div class="meta">
+            <strong>Software Developer — ABC Pvt Ltd</strong>
+            <div><small>2021 — 2023</small></div>
+            <div style="color:var(--muted)">Fullstack development, API design and testing, and CI/CD improvements.</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div class="meta">
+            <strong>Junior Developer — Intern</strong>
+            <div><small>2020 — 2021</small></div>
+            <div style="color:var(--muted)">Collaborated on internal tools and built automated test suites.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h3 style="margin-top:18px">Contact</h3>
+      <div class="card reveal">
+        <form id="contactForm">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+          <input class="full" type="text" id="subject" name="subject" placeholder="Subject" required>
+          <textarea class="full" id="message" name="message" placeholder="Message..." required></textarea>
+          <div class="full" style="display:flex;gap:12px;justify-content:flex-end">
+            <button type="submit" class="btn primary">Send Email</button>
+            <button type="button" class="btn" onclick="clearForm()">Clear</button>
+          </div>
+        </form>
+        <p style="margin-top:12px;color:var(--muted);font-size:13px">This form opens your default mail client (mailto) with prefilled content. To enable server-side emails, integrate services like EmailJS, Formspree, or a small backend endpoint.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div style="font-weight:600">Harsh Hirapara • Full Stack Developer</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:6px">© <span id="year"></span> — Built with HTML, CSS & JS</div>
+    </footer>
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll helper
+    function scrollToSection(id){
+      document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    // reveal on scroll using IntersectionObserver
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      })
+    },{threshold:0.12});
+
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // animate skill bars when visible
+    window.addEventListener('DOMContentLoaded', ()=>{
+      const bars = document.querySelectorAll('.bar > i');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){
+            const w = en.target.getAttribute('data-width') || '70';
+            en.target.style.width = w + '%';
+            io.unobserve(en.target);
+          }
+        })
+      },{threshold:0.2});
+      bars.forEach(b=>io.observe(b));
+    });
+
+    // contact form — open default mail client with prefilled values
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const subject = encodeURIComponent(document.getElementById('subject').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      // change this to your real incoming email
+      const to = 'harsh.email@example.com';
+
+      const body = encodeURIComponent(`From: ${name} <${email}>\n\n${decodeURIComponent(message)}`);
+      // Open mail client
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+
+    function clearForm(){
+      form.reset();
+    }
+
+    // helpful UX: make header nav links smooth
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const href = a.getAttribute('href').replace('#','');
+        scrollToSection(href);
+      })
+    });
+  </script>
+</body>
+</html>
