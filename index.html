@@ -1,553 +1,969 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Harsh Hirapara — Software Engineer</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Harsh Hirapara — Software Engineer</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Harsh Hirapara — Software Engineer. Full-stack (Java/Spring Boot/React), microservices, event-driven systems, cloud & DevOps." />
-  <meta name="robots" content="index,follow" />
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Harsh Hirapara — Software Engineer. Full-stack (Java/Spring Boot/React), microservices, event-driven systems, cloud & DevOps."
+    />
+    <meta name="robots" content="index,follow" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <style>
-    :root{
-      --bg:#f7f9fc;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent:#0f62fe;
-      --glass: rgba(15,98,254,0.06);
-      --shadow: 0 6px 22px rgba(23,23,23,0.06);
-      --radius: 12px;
-      --max-width:1100px;
-      --container-padding:24px;
-      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;background:var(--bg);color:#111}
-    a{color:inherit;text-decoration:none}
+    <style>
+      :root {
+        --bg: #f7f9fc;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #0f62fe;
+        --glass: rgba(15, 98, 254, 0.06);
+        --shadow: 0 6px 22px rgba(23, 23, 23, 0.06);
+        --radius: 12px;
+        --max-width: 1100px;
+        --container-padding: 24px;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: var(--bg);
+        color: #111;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-    /* Accessibility focus */
-    :focus-visible{
-      outline: 3px solid rgba(15,98,254,0.45);
-      outline-offset: 3px;
-      border-radius: 10px;
-    }
+      /* Accessibility focus */
+      :focus-visible {
+        outline: 3px solid rgba(15, 98, 254, 0.45);
+        outline-offset: 3px;
+        border-radius: 10px;
+      }
 
-    .wrap{max-width:var(--max-width);margin:28px auto;padding:var(--container-padding)}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
+      .wrap {
+        max-width: var(--max-width);
+        margin: 28px auto;
+        padding: var(--container-padding);
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
 
-    .avatar-img{
-      width:56px;
-      height:56px;
-      border-radius:12px;
-      object-fit:cover;
-      box-shadow: var(--shadow);
-      border: 2px solid rgba(255,255,255,0.9);
-      background: #fff;
-    }
+      .avatar-img {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: var(--shadow);
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        background: #fff;
+      }
 
-    nav{display:flex;gap:12px;align-items:center}
+      nav {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
 
-    /* Links hover effects (requested) */
-    nav a{
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:700;
-      color:var(--muted);
-      position:relative;
-      transition: transform .18s ease, background-color .18s ease, color .18s ease, box-shadow .18s ease;
-    }
-    nav a:hover{
-      background: rgba(15,98,254,0.08);
-      color: #0b2ea8;
-      transform: translateY(-1px);
-    }
-    nav a:active{ transform: translateY(0px); }
-    nav a.cta{
-      background:var(--card);
-      box-shadow:var(--shadow);
-      color:var(--accent);
-    }
-    nav a.cta:hover{
-      background: rgba(15,98,254,0.10);
-      box-shadow: 0 10px 28px rgba(23,23,23,0.10);
-    }
+      /* Links hover effects (requested) */
+      nav a {
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: 700;
+        color: var(--muted);
+        position: relative;
+        transition: transform 0.18s ease, background-color 0.18s ease,
+          color 0.18s ease, box-shadow 0.18s ease;
+      }
+      nav a:hover {
+        background: rgba(15, 98, 254, 0.08);
+        color: #0b2ea8;
+        transform: translateY(-1px);
+      }
+      nav a:active {
+        transform: translateY(0px);
+      }
+      nav a.cta {
+        background: var(--card);
+        box-shadow: var(--shadow);
+        color: var(--accent);
+      }
+      nav a.cta:hover {
+        background: rgba(15, 98, 254, 0.1);
+        box-shadow: 0 10px 28px rgba(23, 23, 23, 0.1);
+      }
 
-    /* Generic hover for inline links (GitHub/LinkedIn/etc.) */
-    .link{
-      color: var(--accent);
-      font-weight: 700;
-      border-bottom: 2px solid transparent;
-      transition: color .18s ease, border-color .18s ease, transform .18s ease;
-      display:inline-block;
-    }
-    .link:hover{
-      color:#0b2ea8;
-      border-color: rgba(15,98,254,0.35);
-      transform: translateY(-1px);
-    }
+      /* Generic hover for inline links (GitHub/LinkedIn/etc.) */
+      .link {
+        color: var(--accent);
+        font-weight: 700;
+        border-bottom: 2px solid transparent;
+        transition: color 0.18s ease, border-color 0.18s ease,
+          transform 0.18s ease;
+        display: inline-block;
+      }
+      .link:hover {
+        color: #0b2ea8;
+        border-color: rgba(15, 98, 254, 0.35);
+        transform: translateY(-1px);
+      }
 
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:26px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}.hero-right{order:-1}}
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 28px;
+        align-items: center;
+        margin-top: 26px;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero-right {
+          order: -1;
+        }
+      }
 
-    .intro h1{font-size:30px;margin:0 0 6px}
-    .intro p.lead{margin:0 0 18px;color:var(--muted);line-height:1.5}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-    .badge{background:var(--glass);padding:8px 10px;border-radius:8px;font-weight:700;color:var(--accent);font-size:13px}
+      .intro h1 {
+        font-size: 30px;
+        margin: 0 0 6px;
+      }
+      .intro p.lead {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+      }
+      .badge {
+        background: var(--glass);
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 13px;
+      }
 
-    .hero-right{
-      background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.85));
-      padding:18px;border-radius:14px;box-shadow:var(--shadow);
-    }
-    .contact-quick{display:flex;flex-direction:column;gap:10px}
+      .hero-right {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.85)
+        );
+        padding: 18px;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+      .contact-quick {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
 
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;
-      padding:10px 14px;border-radius:10px;
-      font-weight:800;border:1px solid rgba(0,0,0,0.05);
-      cursor:pointer;background:#fff;
-      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, filter .18s ease;
-    }
-    .btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 28px rgba(23,23,23,0.10); }
-    .btn:active{ transform: translateY(0px); box-shadow: var(--shadow); }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: 800;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        background: #fff;
+        transition: transform 0.18s ease, box-shadow 0.18s ease,
+          background-color 0.18s ease, filter 0.18s ease;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 28px rgba(23, 23, 23, 0.1);
+      }
+      .btn:active {
+        transform: translateY(0px);
+        box-shadow: var(--shadow);
+      }
 
-    .btn.primary{background:var(--accent);color:#fff;border:none}
-    .btn.primary:hover{ filter: brightness(1.03); }
-    .btn.ghost{background:transparent;box-shadow:none}
+      .btn.primary {
+        background: var(--accent);
+        color: #fff;
+        border: none;
+      }
+      .btn.primary:hover {
+        filter: brightness(1.03);
+      }
+      .btn.ghost {
+        background: transparent;
+        box-shadow: none;
+      }
 
-    section{margin-top:40px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+      section {
+        margin-top: 40px;
+      }
+      .card {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+      }
 
-    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .skill{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff)}
-    .skill .meta{display:flex;justify-content:space-between;margin-bottom:8px}
-    .bar{height:10px;background:#e9eef9;border-radius:8px;overflow:hidden}
-    .bar > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#6a8cff);border-radius:8px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .skill {
+        padding: 12px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #fff, #fbfdff);
+      }
+      .skill .meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+      .bar {
+        height: 10px;
+        background: #e9eef9;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .bar > i {
+        display: block;
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--accent), #6a8cff);
+        border-radius: 8px;
+        transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
 
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:900px){.projects{grid-template-columns:repeat(1,1fr)}}
-    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfdff);border:1px solid rgba(15,98,254,0.04);transition: transform .18s ease, box-shadow .18s ease}
-    .project:hover{ transform: translateY(-2px); box-shadow: 0 12px 34px rgba(23,23,23,0.10); }
-    .project h4{margin:0 0 8px}
-    .project p{margin:0 0 12px;color:var(--muted)}
-    .project .links{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-    .project .tag{font-size:12px;color:var(--muted);font-weight:800;background:rgba(17,17,17,0.03);padding:6px 8px;border-radius:8px}
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      @media (max-width: 900px) {
+        .projects {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      .project {
+        padding: 14px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #fff, #fcfdff);
+        border: 1px solid rgba(15, 98, 254, 0.04);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+      }
+      .project:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 34px rgba(23, 23, 23, 0.1);
+      }
+      .project h4 {
+        margin: 0 0 8px;
+      }
+      .project p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+      .project .links {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .project .tag {
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 800;
+        background: rgba(17, 17, 17, 0.03);
+        padding: 6px 8px;
+        border-radius: 8px;
+      }
 
-    .timeline{display:flex;flex-direction:column;gap:12px}
-    .item{display:flex;gap:12px;align-items:flex-start}
-    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px}
-    .meta small{color:var(--muted)}
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        margin-top: 6px;
+      }
+      .meta small {
+        color: var(--muted);
+      }
 
-    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    form .full{grid-column:1/-1}
-    input,textarea{padding:12px;border-radius:8px;border:1px solid rgba(17,17,17,0.06);font-size:14px}
-    textarea{min-height:120px;resize:vertical}
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      form .full {
+        grid-column: 1/-1;
+      }
+      input,
+      textarea {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(17, 17, 17, 0.06);
+        font-size: 14px;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
 
-    footer{margin:30px 0;text-align:center;color:var(--muted)}
+      footer {
+        margin: 30px 0;
+        text-align: center;
+        color: var(--muted);
+      }
 
-    .reveal{opacity:0;transform:translateY(18px);transition:all .7s cubic-bezier(.2,.8,.2,1)}
-    .reveal.visible{opacity:1;transform:none}
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
 
-    /* Mobile */
-    @media (max-width:700px){
-      nav{display:none}
-      .wrap{padding:16px}
-      .projects{grid-template-columns:1fr}
-      .skills-grid{grid-template-columns:1fr}
-      form{grid-template-columns:1fr}
-      #menuBtn{display:inline-flex !important}
-    }
+      /* Mobile */
+      @media (max-width: 700px) {
+        nav {
+          display: none;
+        }
+        .wrap {
+          padding: 16px;
+        }
+        .projects {
+          grid-template-columns: 1fr;
+        }
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+        form {
+          grid-template-columns: 1fr;
+        }
+        #menuBtn {
+          display: inline-flex !important;
+        }
+      }
 
-    /* Mobile menu */
-    #menuBtn{display:none}
-    #mobileNav{display:none;margin-top:12px}
-    #mobileNav a.btn{justify-content:flex-start}
+      /* Mobile menu */
+      #menuBtn {
+        display: none;
+      }
+      #mobileNav {
+        display: none;
+        margin-top: 12px;
+      }
+      #mobileNav a.btn {
+        justify-content: flex-start;
+      }
 
-    /* Skip link */
-    .skip-link{
-      position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
-    }
-    .skip-link:focus{
-      left:16px;top:16px;width:auto;height:auto;
-      padding:10px 12px;background:#fff;border-radius:10px;
-      box-shadow: 0 10px 28px rgba(23,23,23,0.14);
-      z-index:9999;
-    }
-  </style>
-</head>
+      /* Skip link */
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip-link:focus {
+        left: 16px;
+        top: 16px;
+        width: auto;
+        height: auto;
+        padding: 10px 12px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 10px 28px rgba(23, 23, 23, 0.14);
+        z-index: 9999;
+      }
+    </style>
+  </head>
 
-<body>
-  <a class="skip-link" href="#about">Skip to content</a>
+  <body>
+    <a class="skip-link" href="#about">Skip to content</a>
 
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <img class="avatar-img" src="https://github.com/harsh-hirapara.png?size=200" alt="Harsh Hirapara">
-        <div>
-          <div style="font-weight:800">Harsh Hirapara</div>
-          <div style="font-size:13px;color:var(--muted)">Software Engineer • Full Stack (Java / Spring Boot / React)</div>
-        </div>
-      </div>
-
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#exp">Experience</a>
-        <a href="#contact" class="cta">Contact</a>
-      </nav>
-
-      <button class="btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">
-        Menu
-      </button>
-    </header>
-
-    <div id="mobileNav" class="card" aria-label="Mobile navigation">
-      <div style="display:flex;flex-direction:column;gap:8px">
-        <a href="#about" class="btn ghost">About</a>
-        <a href="#skills" class="btn ghost">Skills</a>
-        <a href="#projects" class="btn ghost">Projects</a>
-        <a href="#exp" class="btn ghost">Experience</a>
-        <a href="#contact" class="btn primary">Contact</a>
-      </div>
-    </div>
-
-    <!-- HERO -->
-    <div class="hero">
-      <div class="intro">
-        <h1 class="reveal">Hi, I'm <span style="color:var(--accent)">Harsh Hirapara</span></h1>
-        <p class="lead reveal">
-          I build scalable backend systems and full-stack products — from microservices and event-driven pipelines
-          to cloud deployments and modern React UIs. Recently worked on real-time medical video streaming and remote device control.
-        </p>
-
-        <div class="badges reveal">
-          <div class="badge">Java • Spring Boot</div>
-          <div class="badge">React • Tailwind</div>
-          <div class="badge">Kafka • RabbitMQ</div>
-          <div class="badge">GCP/AWS • Docker/K8s</div>
-        </div>
-
-        <div style="display:flex;gap:12px;align-items:center" class="reveal">
-          <button class="btn primary" type="button" onclick="scrollToSection('projects')">See Projects</button>
-          <a class="btn ghost" href="#contact">Contact Me</a>
-          <!-- <a class="btn" href="Harsh_Hirapara_Resume.pdf" target="_blank" rel="noopener">Resume</a> -->
-        </div>
-      </div>
-
-      <aside class="hero-right card reveal">
-        <div style="font-weight:800;margin-bottom:8px">Quick Info</div>
-        <div class="contact-quick">
-
-          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:800">Email</div>
-              <div style="font-size:13px;color:var(--muted)">harshmathurbhai@gmail.com</div>
+    <div class="wrap">
+      <header>
+        <div class="brand">
+          <img
+            class="avatar-img"
+            src="https://github.com/harsh-hirapara.png?size=200"
+            alt="Harsh Hirapara"
+          />
+          <div>
+            <div style="font-weight: 800">Harsh Hirapara</div>
+            <div style="font-size: 13px; color: var(--muted)">
+              Software Engineer • Full Stack (Java / Spring Boot / React)
             </div>
-            <button class="btn" type="button" onclick="scrollToSection('contact')">Message</button>
+          </div>
+        </div>
+
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#exp">Work Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact" class="cta">Contact</a>
+        </nav>
+
+        <button
+          class="btn"
+          id="menuBtn"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          Menu
+        </button>
+      </header>
+
+      <div id="mobileNav" class="card" aria-label="Mobile navigation">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <a href="#about" class="btn ghost">About</a>
+          <a href="#skills" class="btn ghost">Skills</a>ß
+          <a href="#exp" class="btn ghost">Work Experience</a>
+          <a href="#projects" class="btn ghost">Projects</a>ß
+          <a href="#contact" class="btn primary">Contact</a>
+        </div>ß
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="intro">
+          <h1 class="reveal">
+            Hi, I'm <span style="color: var(--accent)">Harsh Hirapara</span>
+          </h1>
+          <p class="lead reveal">
+            I build scalable backend systems and full-stack products — from
+            microservices and event-driven pipelines to cloud deployments and
+            modern React UIs. Recently worked on real-time medical video
+            streaming and remote device control.
+          </p>
+
+          <div class="badges reveal">
+            <div class="badge">Java • Spring Boot</div>
+            <div class="badge">React • Tailwind</div>
+            <div class="badge">Kafka • RabbitMQ</div>
+            <div class="badge">GCP/AWS • Docker/K8s</div>
           </div>
 
-          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:800">Location</div>
-              <div style="font-size:13px;color:var(--muted)">Canada</div>
+          <div
+            style="display: flex; gap: 12px; align-items: center"
+            class="reveal"
+          >
+            <button
+              class="btn primary"
+              type="button"
+              onclick="scrollToSection('projects')"
+            >
+              See Projects
+            </button>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+            <!-- <a class="btn" href="Harsh_Hirapara_Resume.pdf" target="_blank" rel="noopener">Resume</a> -->
+          </div>
+        </div>
+
+        <aside class="hero-right card reveal">
+          <div style="font-weight: 800; margin-bottom: 8px">Quick Info</div>
+          <div class="contact-quick">
+            <div
+              class="card"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <div style="font-weight: 800">Email</div>
+                <div style="font-size: 13px; color: var(--muted)">
+                  harshmathurbhai@gmail.com
+                </div>
+              </div>
+              <button
+                class="btn"
+                type="button"
+                onclick="scrollToSection('contact')"
+              >
+                Message
+              </button>
             </div>
-            <div style="font-size:12px;color:var(--muted);font-weight:800">Open to SWE roles</div>
+
+            <div
+              class="card"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <div style="font-weight: 800">Location</div>
+                <div style="font-size: 13px; color: var(--muted)">Canada</div>
+              </div>
+              <div
+                style="font-size: 12px; color: var(--muted); font-weight: 800"
+              >
+                Open to Work
+              </div>
+            </div>
+
+            <div
+              class="card"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div>
+                <div style="font-weight: 800">Links</div>
+                <div
+                  style="font-size: 13px; color: var(--muted); line-height: 1.6"
+                >
+                  <a
+                    class="link"
+                    href="https://github.com/harsh-hirapara"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub</a
+                  >
+                  •
+                  <a
+                    class="link"
+                    href="https://www.linkedin.com/in/harsh-hirapara-bbb562208/"
+                    target="_blank"
+                    rel="noopener"
+                    >LinkedIn</a
+                  >
+                  •
+                  <a
+                    class="link"
+                    href="https://leetcode.com/u/Harsh-Hirapara/"
+                    target="_blank"
+                    rel="noopener"
+                    >LeetCode</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="card reveal">
+          <h3>About Me</h3>
+          <p style="color: var(--muted)">
+            I’m a software engineer focused on backend and full-stack
+            development. I enjoy building reliable systems — microservices,
+            event-driven architectures, and cloud deployments — with attention
+            to performance, monitoring, and clean API design. I’ve worked on
+            low-latency medical video streaming and device-control messaging,
+            and I also build product-focused applications like e-commerce
+            platforms with secure authentication and payments.
+          </p>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <h3 style="margin-top: 18px">Skills</h3>
+        <div class="skills-grid">
+          <div class="skill card reveal">
+            <div class="meta">
+              <strong>Backend (Node.js / NestJS, Java / Spring Boot)</strong
+              ><span>90%</span>
+            </div>
+            <div class="bar"><i data-width="90"></i></div>
+            <div style="margin-top: 10px; color: var(--muted); font-size: 13px">
+              REST APIs • Microservices • Auth • Testing
+            </div>
           </div>
 
-          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:800">Links</div>
-              <div style="font-size:13px;color:var(--muted);line-height:1.6">
-                <a class="link" href="https://github.com/harsh-hirapara" target="_blank" rel="noopener">GitHub</a> •
-                <a class="link" href="https://www.linkedin.com/in/harsh-hirapara-bbb562208/" target="_blank" rel="noopener">LinkedIn</a> •
-                <a class="link" href="https://leetcode.com/u/Harsh-Hirapara/" target="_blank" rel="noopener">LeetCode</a>
+          <div class="skill card reveal">
+            <div class="meta">
+              <strong>Frontend (React, Next.js, Angular)</strong><span>80%</span>
+            </div>
+            <div class="bar"><i data-width="80"></i></div>
+            <div style="margin-top: 10px; color: var(--muted); font-size: 13px">
+              HTML • CSS • JS • TS • React • Angular • Tailwind
+            </div>
+          </div>
+
+          <div class="skill card reveal">
+            <div class="meta">
+              <strong>Event-Driven Systems</strong><span>85%</span>
+            </div>
+            <div class="bar"><i data-width="85"></i></div>
+            <div style="margin-top: 10px; color: var(--muted); font-size: 13px">
+              Kafka • RabbitMQ • MQTT • Streaming workflows
+            </div>
+          </div>
+
+          <div class="skill card reveal">
+            <div class="meta">
+              <strong>Cloud / DevOps</strong><span>80%</span>
+            </div>
+            <div class="bar"><i data-width="80"></i></div>
+            <div style="margin-top: 10px; color: var(--muted); font-size: 13px">
+              GCP • AWS • Docker • Kubernetes • CI/CD
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="exp">
+        <h3 style="margin-top: 18px">Work Experience</h3>
+        <div class="card timeline reveal">
+          <div class="item">
+            <div class="dot"></div>
+            <div class="meta">
+              <strong>Software Developer Intern — HoloRay (Canada)</strong>
+              <div><small>Jan 2025 — Dec 2025</small></div>
+              <div
+                style="color: var(--muted); line-height: 1.45; margin-top: 6px"
+              >
+                • Developed real-time medical video streaming using LiveSwitch
+                Cloud + Web SDK<br />
+                • Implemented MQTT messaging via RabbitMQ for device control
+                (≈40% lower latency)<br />
+                • Built admin dashboard for monitoring/configuration + privacy
+                masking features
               </div>
             </div>
           </div>
 
+          <div class="item">
+            <div class="dot"></div>
+            <div class="meta">
+              <strong>Software Developer — PAR Solution (India)</strong>
+              <div><small>Jan 2022 — Dec 2023</small></div>
+              <div
+                style="color: var(--muted); line-height: 1.45; margin-top: 6px"
+              >
+                • Delivered features across MERN + Spring Boot products;
+                contributed to cost reduction<br />
+                • Built A/B testing infrastructure using automation (Puppeteer)
+                at scale<br />
+                • Migrated large DocumentDB data to MongoDB Atlas with minimal
+                downtime
+              </div>
+            </div>
+          </div>
         </div>
-      </aside>
+      </section>
+
+            <!-- PROJECTS -->
+      <section id="projects">
+        <h3 style="margin-top: 18px">Projects</h3>
+        <div class="projects">
+          <div class="project reveal">
+            <h4>E-Shop (Full-Stack E-commerce)</h4>
+            <p>
+              Full-stack marketplace with authentication, dashboards, product
+              management, and payments integration.
+            </p>
+            <div class="links">
+              <span class="tag">React</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+            <div
+              style="
+                margin-top: 10px;
+                color: var(--muted);
+                font-size: 13px;
+                line-height: 1.45;
+              "
+            >
+              • JWT/OAuth auth + role-based access (Admin/Seller/Customer)<br />
+              • Checkout with Stripe/PayPal integration<br />
+              • Swagger/OpenAPI docs + CI/CD via GitHub Actions
+            </div>
+            <div class="links" style="margin-top: 12px">
+              <a
+                class="link"
+                href="https://github.com/harsh-hirapara/E-shop-react-frontend"
+                target="_blank"
+                rel="noopener"
+                >Frontend Repo</a
+              >
+              •
+              <a
+                class="link"
+                href="https://github.com/harsh-hirapara/E-shop-springboot-backend"
+                target="_blank"
+                rel="noopener"
+                >Backend Repo</a
+              >
+              •
+              <a class="link" href="#" target="_blank" rel="noopener">Live</a>
+            </div>
+          </div>
+
+          <div class="project reveal">
+            <h4>E-commerce Microservices Platform</h4>
+            <p>
+              Microservices-based e-commerce system with event-driven workflows,
+              observability, and resilience patterns.
+            </p>
+            <div class="links">
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Kafka</span>
+              <span class="tag">Keycloak</span>
+            </div>
+            <div
+              style="
+                margin-top: 10px;
+                color: var(--muted);
+                font-size: 13px;
+                line-height: 1.45;
+              "
+            >
+              • Service discovery, API gateway, centralized config<br />
+              • Resilience4j + distributed tracing (Zipkin)<br />
+              • Metrics dashboards (Prometheus/Grafana)
+            </div>
+            <div class="links" style="margin-top: 12px">
+              <a class="link" href="#" target="_blank" rel="noopener">Repo</a> •
+              <a class="link" href="#" target="_blank" rel="noopener">Live</a>
+            </div>
+          </div>
+
+          <div class="project reveal">
+            <h4>Real-Time Medical Video Streaming (Internship)</h4>
+            <p>
+              Multi-source live streaming with cloud deployment and remote
+              device control messaging.
+            </p>
+            <div class="links">
+              <span class="tag">LiveSwitch</span>
+              <span class="tag">MQTT</span>
+              <span class="tag">RabbitMQ</span>
+            </div>
+            <div
+              style="
+                margin-top: 10px;
+                color: var(--muted);
+                font-size: 13px;
+                line-height: 1.45;
+              "
+            >
+              • Built low-latency streaming pipeline and dashboard UI<br />
+              • Implemented remote device control; reduced latency ~40%<br />
+              • Admin tools for monitoring + privacy masking
+            </div>
+            <div class="links" style="margin-top: 12px">
+              <span
+                style="color: var(--muted); font-weight: 800; font-size: 13px"
+                >Demo: on request</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h3 style="margin-top: 18px">Contact</h3>
+        <div class="card reveal">
+          <form id="contactForm">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+            <input
+              class="full"
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+            <textarea
+              class="full"
+              id="message"
+              name="message"
+              placeholder="Message..."
+              required
+            ></textarea>
+            <div
+              class="full"
+              style="display: flex; gap: 12px; justify-content: flex-end"
+            >
+              <button type="submit" class="btn primary">Send Email</button>
+              <button type="button" class="btn" onclick="clearForm()">
+                Clear
+              </button>
+            </div>
+          </form>
+          <p style="margin-top: 12px; color: var(--muted); font-size: 13px">
+            This form opens your default mail client (mailto) with prefilled
+            content.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <div style="font-weight: 700">Harsh Hirapara • Software Engineer</div>
+        <div style="font-size: 13px; color: var(--muted); margin-top: 6px">
+          © <span id="year"></span> — Built with HTML, CSS & JS
+        </div>
+      </footer>
     </div>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="card reveal">
-        <h3>About Me</h3>
-        <p style="color:var(--muted)">
-          I’m a software engineer focused on backend and full-stack development. I enjoy building reliable systems —
-          microservices, event-driven architectures, and cloud deployments — with attention to performance, monitoring,
-          and clean API design. I’ve worked on low-latency medical video streaming and device-control messaging, and I also
-          build product-focused applications like e-commerce platforms with secure authentication and payments.
-        </p>
-      </div>
-    </section>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <h3 style="margin-top:18px">Skills</h3>
-      <div class="skills-grid">
-        <div class="skill card reveal">
-          <div class="meta"><strong>Backend (Node.js / NestJS, Java / Spring Boot)</strong><span>90%</span></div>
-          <div class="bar"><i data-width="90"></i></div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px">
-            REST APIs • Microservices • Auth • Testing
-          </div>
-        </div>
+      function scrollToSection(id) {
+        document
+          .getElementById(id)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
 
-        <div class="skill card reveal">
-          <div class="meta"><strong>Frontend (React, Angular)</strong><span>80%</span></div>
-          <div class="bar"><i data-width="80"></i></div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px">
-            HTML • CSS • JS • TS • React • Angular • Tailwind
-          </div>
-        </div>
+      // Reveal-on-scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
 
-        <div class="skill card reveal">
-          <div class="meta"><strong>Event-Driven Systems</strong><span>85%</span></div>
-          <div class="bar"><i data-width="85"></i></div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px">
-            Kafka • RabbitMQ • MQTT • Streaming workflows
-          </div>
-        </div>
+      // Skill bars animation
+      window.addEventListener("DOMContentLoaded", () => {
+        const bars = document.querySelectorAll(".bar > i");
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((en) => {
+              if (en.isIntersecting) {
+                const w = en.target.getAttribute("data-width") || "70";
+                en.target.style.width = w + "%";
+                io.unobserve(en.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        bars.forEach((b) => io.observe(b));
+      });
 
-        <div class="skill card reveal">
-          <div class="meta"><strong>Cloud / DevOps</strong><span>80%</span></div>
-          <div class="bar"><i data-width="80"></i></div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px">
-            GCP • AWS • Docker • Kubernetes • CI/CD
-          </div>
-        </div>
-      </div>
-    </section>
+      // Contact form (fixed encoding)
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h3 style="margin-top:18px">Selected Projects</h3>
-      <div class="projects">
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-        <div class="project reveal">
-          <h4>E-commerce Microservices Platform</h4>
-          <p>
-            Microservices-based e-commerce system with event-driven workflows, observability, and resilience patterns.
-          </p>
-          <div class="links">
-            <span class="tag">Spring Boot</span>
-            <span class="tag">Kafka</span>
-            <span class="tag">Keycloak</span>
-          </div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;line-height:1.45">
-            • Service discovery, API gateway, centralized config<br/>
-            • Resilience4j + distributed tracing (Zipkin)<br/>
-            • Metrics dashboards (Prometheus/Grafana)
-          </div>
-          <div class="links" style="margin-top:12px">
-            <a class="link" href="#" target="_blank" rel="noopener">Repo</a> •
-            <a class="link" href="#" target="_blank" rel="noopener">Live</a>
-          </div>
-        </div>
+        const to = "harshmathurbhai@gmail.com";
 
-        <div class="project reveal">
-          <h4>E-Shop (Full-Stack E-commerce)</h4>
-          <p>
-            Full-stack marketplace with authentication, dashboards, product management, and payments integration.
-          </p>
-          <div class="links">
-            <span class="tag">React</span>
-            <span class="tag">Spring Boot</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;line-height:1.45">
-            • JWT/OAuth auth + role-based access (Admin/Seller/Customer)<br/>
-            • Checkout with Stripe/PayPal integration<br/>
-            • Swagger/OpenAPI docs + CI/CD via GitHub Actions
-          </div>
-          <div class="links" style="margin-top:12px">
-            <a class="link" href="https://github.com/harsh-hirapara/E-shop-react-frontend" target="_blank" rel="noopener">Frontend Repo</a> •
-            <a class="link" href="https://github.com/harsh-hirapara/E-shop-springboot-backend" target="_blank" rel="noopener">Backend Repo</a> •
-            <a class="link" href="#" target="_blank" rel="noopener">Live</a>
-          </div>
-        </div>
-
-        <div class="project reveal">
-          <h4>Real-Time Medical Video Streaming (Internship)</h4>
-          <p>
-            Multi-source live streaming with cloud deployment and remote device control messaging.
-          </p>
-          <div class="links">
-            <span class="tag">LiveSwitch</span>
-            <span class="tag">MQTT</span>
-            <span class="tag">RabbitMQ</span>
-          </div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px;line-height:1.45">
-            • Built low-latency streaming pipeline and dashboard UI<br/>
-            • Implemented remote device control; reduced latency ~40%<br/>
-            • Admin tools for monitoring + privacy masking
-          </div>
-          <div class="links" style="margin-top:12px">
-            <span style="color:var(--muted);font-weight:800;font-size:13px">Demo: on request</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="exp">
-      <h3 style="margin-top:18px">Experience</h3>
-      <div class="card timeline reveal">
-
-        <div class="item">
-          <div class="dot"></div>
-          <div class="meta">
-            <strong>SDE Intern — HoloRay (Montreal)</strong>
-            <div><small>Jan 2025 — Oct 2025</small></div>
-            <div style="color:var(--muted);line-height:1.45;margin-top:6px">
-              • Developed real-time medical video streaming using LiveSwitch Cloud + Web SDK<br/>
-              • Implemented MQTT messaging via RabbitMQ for device control (≈40% lower latency)<br/>
-              • Built admin dashboard for monitoring/configuration + privacy masking features
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="dot"></div>
-          <div class="meta">
-            <strong>Software Developer — PAR Solution (India)</strong>
-            <div><small>Jan 2022 — Dec 2023</small></div>
-            <div style="color:var(--muted);line-height:1.45;margin-top:6px">
-              • Delivered features across MERN + Spring Boot products; contributed to cost reduction<br/>
-              • Built A/B testing infrastructure using automation (Puppeteer) at scale<br/>
-              • Migrated large DocumentDB data to MongoDB Atlas with minimal downtime
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h3 style="margin-top:18px">Contact</h3>
-      <div class="card reveal">
-        <form id="contactForm">
-          <input type="text" id="name" name="name" placeholder="Your name" required>
-          <input type="email" id="email" name="email" placeholder="Your email" required>
-          <input class="full" type="text" id="subject" name="subject" placeholder="Subject" required>
-          <textarea class="full" id="message" name="message" placeholder="Message..." required></textarea>
-          <div class="full" style="display:flex;gap:12px;justify-content:flex-end">
-            <button type="submit" class="btn primary">Send Email</button>
-            <button type="button" class="btn" onclick="clearForm()">Clear</button>
-          </div>
-        </form>
-        <p style="margin-top:12px;color:var(--muted);font-size:13px">
-          This form opens your default mail client (mailto) with prefilled content.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <div style="font-weight:700">Harsh Hirapara • Software Engineer</div>
-      <div style="font-size:13px;color:var(--muted);margin-top:6px">© <span id="year"></span> — Built with HTML, CSS & JS</div>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    function scrollToSection(id){
-      document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});
-    }
-
-    // Reveal-on-scroll
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      })
-    },{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-    // Skill bars animation
-    window.addEventListener('DOMContentLoaded', ()=>{
-      const bars = document.querySelectorAll('.bar > i');
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(en=>{
-          if(en.isIntersecting){
-            const w = en.target.getAttribute('data-width') || '70';
-            en.target.style.width = w + '%';
-            io.unobserve(en.target);
-          }
-        })
-      },{threshold:0.2});
-      bars.forEach(b=>io.observe(b));
-    });
-
-    // Contact form (fixed encoding)
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const subject = document.getElementById('subject').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      const to = 'harshmathurbhai@gmail.com';
-
-      const bodyText =
-`From: ${name} <${email}>
+        const bodyText = `From: ${name} <${email}>
 
 ${message}`;
 
-      const mailto =
-        `mailto:${encodeURIComponent(to)}` +
-        `?subject=${encodeURIComponent(subject)}` +
-        `&body=${encodeURIComponent(bodyText)}`;
+        const mailto =
+          `mailto:${encodeURIComponent(to)}` +
+          `?subject=${encodeURIComponent(subject)}` +
+          `&body=${encodeURIComponent(bodyText)}`;
 
-      window.location.href = mailto;
-    });
-
-    function clearForm(){
-      form.reset();
-    }
-
-    // Smooth scroll on desktop nav
-    document.querySelectorAll('nav a').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        e.preventDefault();
-        const href = a.getAttribute('href').replace('#','');
-        scrollToSection(href);
-      })
-    });
-
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-
-    menuBtn?.addEventListener('click', () => {
-      const isOpen = mobileNav.style.display === 'block';
-      mobileNav.style.display = isOpen ? 'none' : 'block';
-      menuBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
-
-    mobileNav?.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', (e) => {
-        // allow smooth scroll behavior like desktop
-        e.preventDefault();
-        const href = a.getAttribute('href').replace('#','');
-        scrollToSection(href);
-
-        mobileNav.style.display = 'none';
-        menuBtn.setAttribute('aria-expanded', 'false');
+        window.location.href = mailto;
       });
-    });
-  </script>
-</body>
+
+      function clearForm() {
+        form.reset();
+      }
+
+      // Smooth scroll on desktop nav
+      document.querySelectorAll("nav a").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const href = a.getAttribute("href").replace("#", "");
+          scrollToSection(href);
+        });
+      });
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileNav = document.getElementById("mobileNav");
+
+      menuBtn?.addEventListener("click", () => {
+        const isOpen = mobileNav.style.display === "block";
+        mobileNav.style.display = isOpen ? "none" : "block";
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+
+      mobileNav?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", (e) => {
+          // allow smooth scroll behavior like desktop
+          e.preventDefault();
+          const href = a.getAttribute("href").replace("#", "");
+          scrollToSection(href);
+
+          mobileNav.style.display = "none";
+          menuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
 </html>
